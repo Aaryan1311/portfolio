@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aaryan Tripathi — Backend Engineer & AI Tinkerer</title>
+  <meta name="description" content="Portfolio of Aaryan Tripathi — SDE at Hypergro.ai, backend wizard, prompt whisperer, and professional night owl." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ============ CURSOR GLOW ============ -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ============ PARTICLE CANVAS ============ -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo">
+      <span class="logo-bracket">{</span>AT<span class="logo-bracket">}</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" data-text="about">about</a></li>
+      <li><a href="#skills" data-text="skills">skills</a></li>
+      <li><a href="#experience" data-text="experience">experience</a></li>
+      <li><a href="#projects" data-text="projects">projects</a></li>
+      <li><a href="#education" data-text="education">education</a></li>
+      <li><a href="#contact" data-text="contact">contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">aaryan@portfolio:~</span>
+        </div>
+        <div class="terminal-body">
+          <p class="terminal-line">
+            <span class="terminal-prompt">$</span>
+            <span class="terminal-command" id="heroCommand"></span>
+            <span class="terminal-cursor">▋</span>
+          </p>
+          <div class="terminal-output" id="heroOutput"></div>
+        </div>
+      </div>
+      <h1 class="hero-name">
+        <span class="hero-greeting">Hey, I'm</span>
+        <span class="hero-highlight">Aaryan Tripathi</span>
+      </h1>
+      <p class="hero-tagline">
+        Backend Engineer <span class="separator">•</span> AI Tinkerer <span class="separator">•</span> Professional Night Owl 🦉
+      </p>
+      <p class="hero-subtitle">
+        I build things that work at 3 AM — because that's when I'm coding.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <span>View My Work</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <span>Let's Talk</span>
+        </a>
+      </div>
+      <div class="hero-scroll-indicator">
+        <span>scroll down</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <h2 class="section-title" data-reveal>
+        <span class="section-number">01.</span> About Me
+        <span class="section-subtitle">// the origin story</span>
+      </h2>
+      <div class="about-grid" data-reveal>
+        <div class="about-text">
+          <p>
+            I'm a <span class="highlight">Software Developer Engineer</span> at
+            <span class="highlight">Hypergro.ai</span>, where I wrangle backends,
+            whisper sweet nothings to language models, and occasionally solve problems
+            that require both AI and actual math. Yes, I voluntarily use math. No, I'm not okay.
+          </p>
+          <p>
+            When I'm not engineering backends or debugging why the model decided to
+            hallucinate a recipe for butter chicken instead of giving a proper response,
+            you'll find me:
+          </p>
+          <ul class="about-list">
+            <li>
+              <span class="list-icon">♟️</span>
+              Playing chess — because debugging code wasn't enough strategic suffering
+            </li>
+            <li>
+              <span class="list-icon">📚</span>
+              Reading books — my second favorite way to stare at text for hours
+            </li>
+            <li>
+              <span class="list-icon">🏸</span>
+              Smashing shuttlecocks on the badminton court
+            </li>
+            <li>
+              <span class="list-icon">🏏</span>
+              Playing cricket & table tennis — I'm a multi-sport threat, apparently
+            </li>
+            <li>
+              <span class="list-icon">🌙</span>
+              Being a night owl — my best code ships after midnight
+            </li>
+          </ul>
+          <p>
+            I have a <span class="highlight">B.Tech in Electrical Engineering</span> from
+            <span class="highlight">NIT Raipur</span>. Yes, EE to Software — I switched lanes
+            like a pro. The circuits are metaphorical now.
+          </p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-inner">
+            <div class="about-avatar">
+              <div class="avatar-placeholder">
+                <span class="avatar-text">AT</span>
+                <div class="avatar-ring"></div>
+              </div>
+            </div>
+            <div class="about-stats">
+              <div class="stat">
+                <span class="stat-number" data-count="3">0</span><span class="stat-plus">+</span>
+                <span class="stat-label">Cups of chai<br/>per debug session</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number" data-count="1000">0</span><span class="stat-plus">+</span>
+                <span class="stat-label">Git commits<br/>(and counting)</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number" data-count="2">0</span>
+                <span class="stat-label">AM — avg<br/>bedtime</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <h2 class="section-title" data-reveal>
+        <span class="section-number">02.</span> Skills & Arsenal
+        <span class="section-subtitle">// weapons of mass deployment</span>
+      </h2>
+      <div class="skills-grid" data-reveal>
+
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Languages</h3>
+            <span class="skill-tagline">I speak fluent semicolon</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="advanced">Java</span>
+            <span class="skill-tag" data-level="advanced">JavaScript</span>
+            <span class="skill-tag" data-level="advanced">TypeScript</span>
+            <span class="skill-tag" data-level="advanced">Python</span>
+            <span class="skill-tag" data-level="intermediate">C/C++</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Frameworks</h3>
+            <span class="skill-tagline">Building blocks of chaos</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="advanced">Express.js</span>
+            <span class="skill-tag" data-level="advanced">Next.js</span>
+            <span class="skill-tag" data-level="intermediate">React</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <h3>Databases</h3>
+            <span class="skill-tagline">Where data goes to rest (in peace)</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="advanced">PostgreSQL</span>
+            <span class="skill-tag" data-level="advanced">MongoDB</span>
+            <span class="skill-tag" data-level="intermediate">MySQL</span>
+            <span class="skill-tag" data-level="intermediate">Redis</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>AI / ML</h3>
+            <span class="skill-tagline">Teaching machines to think (scary, I know)</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="advanced">Prompt Engineering</span>
+            <span class="skill-tag" data-level="intermediate">Transformer Architecture</span>
+            <span class="skill-tag" data-level="intermediate">Neural Networks</span>
+            <span class="skill-tag" data-level="intermediate">Machine Learning</span>
+            <span class="skill-tag" data-level="intermediate">Tokenization</span>
+            <span class="skill-tag" data-level="intermediate">LLM Training</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3>Tools & DevOps</h3>
+            <span class="skill-tagline">Git push --force (just kidding... mostly)</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="advanced">Git & GitHub</span>
+            <span class="skill-tag" data-level="intermediate">n8n</span>
+            <span class="skill-tag" data-level="advanced">Shell Scripting</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h3>Fundamentals</h3>
+            <span class="skill-tagline">The boring stuff that makes you good</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="advanced">OOP</span>
+            <span class="skill-tag" data-level="advanced">DSA</span>
+            <span class="skill-tag" data-level="advanced">DBMS</span>
+            <span class="skill-tag" data-level="intermediate">Operating Systems</span>
+            <span class="skill-tag" data-level="intermediate">Computer Networks</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <h2 class="section-title" data-reveal>
+        <span class="section-number">03.</span> Experience
+        <span class="section-subtitle">// the professional lore</span>
+      </h2>
+      <div class="timeline" data-reveal>
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Software Developer Engineer</h3>
+              <span class="timeline-badge current">Current</span>
+            </div>
+            <p class="timeline-company">
+              <a href="https://hypergro.ai" target="_blank" rel="noopener">Hypergro.ai</a>
+            </p>
+            <p class="timeline-date">Present</p>
+            <ul class="timeline-details">
+              <li>Building and maintaining robust backend systems that handle real workloads without breaking a sweat (the servers, not me — I sweat plenty)</li>
+              <li>Wearing multiple hats as a Prompt Engineer — teaching LLMs to behave and give useful answers instead of existential poetry</li>
+              <li>Solving complex problems at the intersection of AI tools and mathematics, because someone has to do the hard stuff</li>
+              <li>Contributing across the full stack when needed — because "that's not my job" isn't in my vocabulary</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>Backend</span>
+              <span>AI/ML</span>
+              <span>Prompt Engineering</span>
+              <span>Problem Solving</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <h2 class="section-title" data-reveal>
+        <span class="section-number">04.</span> Projects
+        <span class="section-subtitle">// things I built (that actually work)</span>
+      </h2>
+      <div class="projects-grid" data-reveal>
+
+        <div class="project-card featured">
+          <div class="project-card-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener" class="project-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" class="project-link" title="Live Demo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Project Alpha</h3>
+          <p class="project-description">
+            A full-stack application that does impressive things. Replace this placeholder with your actual project description. What problem does it solve? What makes it cool?
+          </p>
+          <div class="project-tech">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>PostgreSQL</span>
+            <span>Redis</span>
+          </div>
+        </div>
+
+        <div class="project-card featured">
+          <div class="project-card-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener" class="project-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" class="project-link" title="Live Demo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Project Beta</h3>
+          <p class="project-description">
+            Another awesome project that showcases your skills. Replace this with the real details — what you built, why, and how. Make it sound as cool as it actually is.
+          </p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Express</span>
+            <span>MongoDB</span>
+            <span>AI/ML</span>
+          </div>
+        </div>
+
+      </div>
+      <p class="projects-note" data-reveal>
+        <span class="note-icon">💡</span>
+        More projects brewing in the lab. Stay tuned — or better yet,
+        <a href="#contact">hire me</a> and I'll build one for you.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="section education" id="education">
+    <div class="container">
+      <h2 class="section-title" data-reveal>
+        <span class="section-number">05.</span> Education
+        <span class="section-subtitle">// where the neurons first fired</span>
+      </h2>
+      <div class="education-card" data-reveal>
+        <div class="edu-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
+        </div>
+        <div class="edu-details">
+          <h3>B.Tech in Electrical Engineering</h3>
+          <p class="edu-institution">National Institute of Technology (NIT), Raipur</p>
+          <p class="edu-note">
+            Started with circuits, ended up debugging code. Somewhere between Ohm's Law and
+            Object-Oriented Programming, I found my true calling. The resistance was futile.
+            <span class="edu-pun">(pun absolutely intended)</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <h2 class="section-title" data-reveal>
+        <span class="section-number">06.</span> Get In Touch
+        <span class="section-subtitle">// let's build something cool</span>
+      </h2>
+      <div class="contact-content" data-reveal>
+        <p class="contact-text">
+          Whether you have a project idea, a job opportunity, want to discuss AI architectures,
+          or just want to debate whether tabs or spaces is the correct answer —
+          <span class="highlight">my inbox is open.</span>
+        </p>
+        <p class="contact-subtext">
+          I don't bite. My code might, but I don't.
+        </p>
+        <a href="mailto:your.email@example.com" class="btn btn-primary btn-lg">
+          <span>Say Hello</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+        <div class="social-links">
+          <a href="#" target="_blank" rel="noopener" class="social-link" title="GitHub" data-tooltip="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener" class="social-link" title="LinkedIn" data-tooltip="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener" class="social-link" title="X (Twitter)" data-tooltip="X / Twitter">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener" class="social-link" title="Google Scholar" data-tooltip="Google Scholar">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener" class="social-link" title="Topmate" data-tooltip="Topmate">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </a>
+          <a href="#" class="social-link" title="Resume" data-tooltip="Resume">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">
+        Designed & Built by <span class="highlight">Aaryan Tripathi</span>
+      </p>
+      <p class="footer-subtext">
+        Crafted with ☕, late nights, and an unhealthy amount of CSS.
+      </p>
+      <div class="footer-chess">♟️ e4 e5 — your move.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
