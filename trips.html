@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trips & Adventures — Aaryan Tripathi</title>
+  <meta name="description" content="A map and journal of trips and adventures by Aaryan Tripathi — from temple towns to tech cities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/trips.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-bracket">{</span>AT<span class="logo-bracket">}</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">home</a></li>
+      <li><a href="articles.html">articles</a></li>
+      <li><a href="chess.html">chess</a></li>
+      <li><a href="education.html">education</a></li>
+      <li><a href="family.html">family</a></li>
+      <li><a href="photos.html">photos</a></li>
+      <li><a href="trips.html">trips</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <h1>Trips &amp; Adventures</h1>
+      <p class="page-tagline">From temple towns to tech cities</p>
+      <p class="page-subtitle">Home base: Bilaspur, Chhattisgarh</p>
+      <div class="home-badge">&#128205; Bilaspur, Chhattisgarh</div>
+    </div>
+  </section>
+
+  <!-- ============ MAP SECTION ============ -->
+  <section class="section map-section">
+    <div class="container">
+      <div id="tripMap"></div>
+    </div>
+  </section>
+
+  <!-- ============ ALL TRIPS ============ -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" data-reveal>All Trips</h2>
+
+      <div class="trips-grid" data-reveal>
+
+        <!-- Trip 1: Shirdi -->
+        <div class="trip-card">
+          <div class="trip-photo">
+            <div class="trip-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <span>Add photo</span>
+            </div>
+            <span class="trip-date-badge">May 2019</span>
+          </div>
+          <div class="trip-info">
+            <h3 class="trip-destination">Shirdi</h3>
+            <p class="trip-state">Maharashtra</p>
+            <p class="trip-story">Family trip to Sai Baba temple. Shirdi, Nashik — faith, food, and family time.</p>
+          </div>
+        </div>
+
+        <!-- Trip 2: Lucknow -->
+        <div class="trip-card">
+          <div class="trip-photo">
+            <div class="trip-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <span>Add photo</span>
+            </div>
+            <span class="trip-date-badge">Dec 2020</span>
+          </div>
+          <div class="trip-info">
+            <h3 class="trip-destination">Lucknow</h3>
+            <p class="trip-state">Uttar Pradesh</p>
+            <p class="trip-story">Cousin's wedding and family function. Loved every moment of the celebration.</p>
+          </div>
+        </div>
+
+        <!-- Trip 3: Silchar -->
+        <div class="trip-card">
+          <div class="trip-photo">
+            <div class="trip-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <span>Add photo</span>
+            </div>
+            <span class="trip-date-badge">Nov 2022</span>
+          </div>
+          <div class="trip-info">
+            <h3 class="trip-destination">Silchar</h3>
+            <p class="trip-state">Assam</p>
+            <p class="trip-story">Inter NIT Chess Tournament. Representing NIT Raipur on the 64 squares.</p>
+          </div>
+        </div>
+
+        <!-- Trip 4: Puri -->
+        <div class="trip-card">
+          <div class="trip-photo">
+            <div class="trip-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <span>Add photo</span>
+            </div>
+            <span class="trip-date-badge">Mar 2023</span>
+          </div>
+          <div class="trip-info">
+            <h3 class="trip-destination">Puri</h3>
+            <p class="trip-state">Odisha</p>
+            <p class="trip-story">Trip with friends. Jagannath Puri temple, Konark Sun temple, and beaches that make you forget deadlines.</p>
+          </div>
+        </div>
+
+        <!-- Trip 5: Dhanbad -->
+        <div class="trip-card">
+          <div class="trip-photo">
+            <div class="trip-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <span>Add photo</span>
+            </div>
+            <span class="trip-date-badge">Feb 2025</span>
+          </div>
+          <div class="trip-info">
+            <h3 class="trip-destination">Dhanbad</h3>
+            <p class="trip-state">Jharkhand</p>
+            <p class="trip-story">Attending Srijan, the annual tech fest at IIT ISM. Innovation, competition, and campus vibes.</p>
+          </div>
+        </div>
+
+        <!-- Trip 6: Surat -->
+        <div class="trip-card">
+          <div class="trip-photo">
+            <div class="trip-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <span>Add photo</span>
+            </div>
+            <span class="trip-date-badge">Apr 2025</span>
+          </div>
+          <div class="trip-info">
+            <h3 class="trip-destination">Surat</h3>
+            <p class="trip-state">Gujarat</p>
+            <p class="trip-story">Participating in a hackathon at NIT Surat. 48 hours of code, caffeine, and creative chaos.</p>
+          </div>
+        </div>
+
+        <!-- Trip 7: Bangalore -->
+        <div class="trip-card">
+          <div class="trip-photo">
+            <div class="trip-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <span>Add photo</span>
+            </div>
+            <span class="trip-date-badge">Aug 2025</span>
+          </div>
+          <div class="trip-info">
+            <h3 class="trip-destination">Bangalore</h3>
+            <p class="trip-state">Karnataka</p>
+            <p class="trip-story">Working at Hypergro.ai. The Silicon Valley of India became home base for the next chapter.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Designed &amp; Built by <span class="highlight">Aaryan Tripathi</span></p>
+      <p class="footer-subtext">Crafted with coffee, late nights, and an unhealthy amount of CSS.</p>
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="articles.html">Articles</a>
+        <a href="chess.html">Chess</a>
+        <a href="education.html">Education</a>
+        <a href="family.html">Family</a>
+        <a href="photos.html">Photos</a>
+        <a href="trips.html">Trips</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/trips.js"></script>
+</body>
+</html>

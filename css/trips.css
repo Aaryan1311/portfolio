@@ -1,0 +1,156 @@
+/* ============================================
+   TRIPS PAGE — Earthy Adventure Theme
+   ============================================ */
+:root {
+  --bg-primary: #1a1814;
+  --bg-secondary: #24211c;
+  --bg-card: #2e2a24;
+  --bg-card-hover: #383430;
+  --text-primary: #f0e8d8;
+  --text-secondary: #b0a890;
+  --text-muted: #7a7260;
+  --accent: #d4a373;
+  --accent-dim: #c49363;
+  --accent-glow: rgba(212, 163, 115, 0.12);
+  --accent-glow-strong: rgba(212, 163, 115, 0.25);
+  --accent-secondary: #6b9b5a;
+  --border: #3a3530;
+  --border-hover: #4a4540;
+  --gradient-1: linear-gradient(135deg, #d4a373, #6b9b5a);
+}
+
+.navbar.scrolled {
+  background: rgba(26, 24, 20, 0.9);
+}
+
+.page-hero h1 {
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--accent);
+  margin-top: 12px;
+  padding: 6px 16px;
+  border: 1px solid rgba(212, 163, 115, 0.3);
+  border-radius: 20px;
+  background: var(--accent-glow);
+}
+
+/* Map container */
+.map-section {
+  margin-bottom: 60px;
+}
+
+#tripMap {
+  width: 100%;
+  height: 450px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  z-index: 1;
+}
+
+/* Trip cards */
+.trips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.trip-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all var(--transition);
+}
+
+.trip-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.trip-photo {
+  width: 100%;
+  height: 200px;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.trip-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trip-photo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+}
+
+.trip-photo-placeholder svg {
+  width: 40px;
+  height: 40px;
+  opacity: 0.3;
+}
+
+.trip-photo-placeholder span {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.trip-date-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 4px 12px;
+  border-radius: 12px;
+  background: rgba(26, 24, 20, 0.85);
+  color: var(--accent);
+  backdrop-filter: blur(8px);
+}
+
+.trip-info {
+  padding: 24px;
+}
+
+.trip-destination {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.trip-state {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.trip-story {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  #tripMap { height: 300px; }
+  .trips-grid { grid-template-columns: 1fr; }
+}
