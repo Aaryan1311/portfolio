@@ -853,9 +853,10 @@ img {
 /* ============ PROJECTS ============ */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+  grid-template-columns: 1fr;
   gap: 24px;
   margin-bottom: 40px;
+  max-width: 700px;
 }
 
 .project-card {
@@ -1026,6 +1027,130 @@ img {
   font-family: var(--font-mono);
   font-size: 0.8rem;
   color: var(--text-muted);
+}
+
+/* ============ PUBLICATIONS ============ */
+.publication-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition);
+}
+
+.publication-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-2);
+}
+
+.publication-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.pub-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.pub-badge-text {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 5px 14px;
+  border-radius: 20px;
+  background: var(--accent-secondary-glow);
+  color: var(--accent-secondary);
+  border: 1px solid rgba(123, 97, 255, 0.25);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.pub-content {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.pub-icon svg {
+  width: 44px;
+  height: 44px;
+  color: var(--accent-secondary);
+  flex-shrink: 0;
+}
+
+.pub-details {
+  flex: 1;
+}
+
+.pub-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.4;
+  padding-right: 120px;
+}
+
+.pub-meta {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pub-meta p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pub-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.pub-value {
+  color: var(--text-secondary);
+}
+
+.pub-scopus {
+  color: var(--accent-secondary);
+  font-weight: 600;
+}
+
+.pub-description {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.pub-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-sm {
+  padding: 8px 18px;
+  font-size: 0.8rem;
 }
 
 /* ============ CONTACT ============ */
@@ -1274,6 +1399,24 @@ img {
   .education-card {
     flex-direction: column;
     padding: 28px;
+  }
+
+  .pub-content {
+    flex-direction: column;
+  }
+
+  .pub-title {
+    padding-right: 0;
+    margin-top: 32px;
+  }
+
+  .pub-badge {
+    top: 14px;
+    right: 14px;
+  }
+
+  .publication-card {
+    padding: 24px;
   }
 
   .timeline {
