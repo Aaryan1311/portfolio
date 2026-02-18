@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photos & Memories — Aaryan Tripathi</title>
+  <meta name="description" content="A photo gallery of moments, memories, and milestones from Aaryan Tripathi's life." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/photos.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-bracket">{</span>AT<span class="logo-bracket">}</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">home</a></li>
+      <li><a href="articles.html">articles</a></li>
+      <li><a href="chess.html">chess</a></li>
+      <li><a href="education.html">education</a></li>
+      <li><a href="family.html">family</a></li>
+      <li><a href="photos.html">photos</a></li>
+      <li><a href="trips.html">trips</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <h1>Photos &amp; Memories</h1>
+      <p class="page-tagline">Moments frozen in time</p>
+      <p class="page-subtitle">Because life happens between the lines of code</p>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Filter Bar -->
+      <div class="filter-bar" data-reveal>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="friends">Friends</button>
+        <button class="filter-btn" data-filter="work">Work</button>
+        <button class="filter-btn" data-filter="family">Family</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+      </div>
+
+      <!-- Photo Grid (Masonry via CSS columns) -->
+      <div class="photo-grid" data-reveal>
+
+        <!-- Friends (4) -->
+        <div class="photo-item" data-category="friends">
+          <div class="photo-placeholder h-small">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <span>Add photo</span>
+          </div>
+        </div>
+
+        <div class="photo-item" data-category="friends">
+          <div class="photo-placeholder h-medium">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <span>Add photo</span>
+          </div>
+        </div>
+
+        <div class="photo-item" data-category="friends">
+          <div class="photo-placeholder h-tall">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <span>Add photo</span>
+          </div>
+        </div>
+
+        <div class="photo-item" data-category="friends">
+          <div class="photo-placeholder h-medium">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <span>Add photo</span>
+          </div>
+        </div>
+
+        <!-- Work (3) -->
+        <div class="photo-item" data-category="work">
+          <div class="photo-placeholder h-medium">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <span>Add photo</span>
+          </div>
+        </div>
+
+        <div class="photo-item" data-category="work">
+          <div class="photo-placeholder h-small">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <span>Add photo</span>
+          </div>
+        </div>
+
+        <div class="photo-item" data-category="work">
+          <div class="photo-placeholder h-tall">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <span>Add photo</span>
+          </div>
+        </div>
+
+        <!-- Family (3) -->
+        <div class="photo-item" data-category="family">
+          <div class="photo-placeholder h-tall">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <span>Add photo</span>
+          </div>
+        </div>
+
+        <div class="photo-item" data-category="family">
+          <div class="photo-placeholder h-medium">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <span>Add photo</span>
+          </div>
+        </div>
+
+        <div class="photo-item" data-category="family">
+          <div class="photo-placeholder h-small">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <span>Add photo</span>
+          </div>
+        </div>
+
+        <!-- Events (2) -->
+        <div class="photo-item" data-category="events">
+          <div class="photo-placeholder h-medium">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <span>Add photo</span>
+          </div>
+        </div>
+
+        <div class="photo-item" data-category="events">
+          <div class="photo-placeholder h-tall">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <span>Add photo</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <img src="" alt="" id="lightboxImg" />
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Designed &amp; Built by <span class="highlight">Aaryan Tripathi</span></p>
+      <p class="footer-subtext">Crafted with coffee, late nights, and an unhealthy amount of CSS.</p>
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="articles.html">Articles</a>
+        <a href="chess.html">Chess</a>
+        <a href="education.html">Education</a>
+        <a href="family.html">Family</a>
+        <a href="photos.html">Photos</a>
+        <a href="trips.html">Trips</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/photos.js"></script>
+</body>
+</html>

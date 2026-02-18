@@ -1,0 +1,192 @@
+/* ============================================
+   EDUCATION PAGE — Chalkboard / Notebook Theme
+   ============================================ */
+:root {
+  --bg-primary: #2a3828;
+  --bg-secondary: #344232;
+  --bg-card: #3a4a38;
+  --bg-card-hover: #425242;
+  --text-primary: #e8e4d4;
+  --text-secondary: #bbb8a4;
+  --text-muted: #8a8774;
+  --accent: #e8d44c;
+  --accent-dim: #d4c040;
+  --accent-glow: rgba(232, 212, 76, 0.12);
+  --accent-glow-strong: rgba(232, 212, 76, 0.25);
+  --border: #4a5a48;
+  --border-hover: #5a6a58;
+  --gradient-1: linear-gradient(135deg, #e8d44c, #e8a04c);
+}
+
+.navbar.scrolled {
+  background: rgba(42, 56, 40, 0.9);
+}
+
+.page-hero {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 38px,
+    rgba(255, 255, 255, 0.04) 38px,
+    rgba(255, 255, 255, 0.04) 40px
+  );
+}
+
+.page-hero h1 {
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Chalk-style decorative line */
+.chalk-divider {
+  width: 100%;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--text-muted) 0px,
+    var(--text-muted) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  opacity: 0.3;
+  margin: 60px 0;
+}
+
+/* Education timeline */
+.edu-timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+.edu-timeline::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), var(--border));
+}
+
+.edu-entry {
+  position: relative;
+  margin-bottom: 48px;
+}
+
+.edu-entry:last-child { margin-bottom: 0; }
+
+.edu-dot {
+  position: absolute;
+  left: -34px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 15px var(--accent-glow-strong);
+}
+
+.edu-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  transition: all var(--transition);
+}
+
+.edu-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.edu-years {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.edu-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.edu-institution-name {
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.edu-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.edu-highlight {
+  display: inline-block;
+  margin-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  padding: 4px 14px;
+  border-radius: 20px;
+  background: var(--accent-glow);
+  color: var(--accent);
+  border: 1px solid rgba(232, 212, 76, 0.2);
+}
+
+/* College Stories */
+.stories-section h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.story-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  transition: all var(--transition);
+}
+
+.story-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.story-emoji {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.story-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.story-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .edu-timeline { padding-left: 30px; }
+  .edu-dot { left: -24px; }
+  .edu-card { padding: 24px; }
+  .stories-grid { grid-template-columns: 1fr; }
+}

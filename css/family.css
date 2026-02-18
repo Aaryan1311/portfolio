@@ -1,0 +1,213 @@
+/* ============================================
+   FAMILY PAGE — Warm Golden Journal Theme
+   ============================================ */
+:root {
+  --bg-primary: #faf6ef;
+  --bg-secondary: #f0e9dd;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fefefe;
+  --text-primary: #3a2e1e;
+  --text-secondary: #6b5d4a;
+  --text-muted: #9a8e7a;
+  --accent: #c4873b;
+  --accent-dim: #b07830;
+  --accent-glow: rgba(196, 135, 59, 0.1);
+  --accent-glow-strong: rgba(196, 135, 59, 0.2);
+  --border: #e0d5c4;
+  --border-hover: #d0c4b0;
+  --gradient-1: linear-gradient(135deg, #c4873b, #d4a04c);
+}
+
+body { color: var(--text-primary); }
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+.navbar.scrolled {
+  background: rgba(250, 246, 239, 0.92);
+  box-shadow: 0 1px 0 var(--border);
+}
+
+.nav-toggle span { background: var(--text-primary); }
+
+.page-hero h1 {
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Journal entry style */
+.journal-section {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.journal-date {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.journal-entry {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px;
+  margin-bottom: 32px;
+  transition: all var(--transition);
+  position: relative;
+}
+
+.journal-entry::before {
+  content: '';
+  position: absolute;
+  left: 36px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(196, 135, 59, 0.1);
+}
+
+.journal-entry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.journal-entry h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+  padding-left: 24px;
+}
+
+.journal-entry p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  padding-left: 24px;
+}
+
+.journal-entry .journal-emoji {
+  position: absolute;
+  left: 22px;
+  font-size: 1.4rem;
+}
+
+/* Family members */
+.family-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.family-member {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  text-align: center;
+  transition: all var(--transition);
+}
+
+.family-member:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.family-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 2rem;
+  border: 3px solid var(--accent-glow);
+}
+
+.family-member h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.family-member p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Certificates */
+.cert-note {
+  text-align: center;
+  margin-bottom: 32px;
+  color: var(--text-secondary);
+}
+
+.cert-note strong {
+  color: var(--accent);
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.cert-slot {
+  aspect-ratio: 4/3;
+  background: var(--bg-card);
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--text-muted);
+  transition: all var(--transition);
+  overflow: hidden;
+  position: relative;
+}
+
+.cert-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+.cert-slot:hover {
+  border-color: var(--accent);
+  background: var(--accent-glow);
+}
+
+.cert-slot svg {
+  width: 32px;
+  height: 32px;
+  opacity: 0.4;
+}
+
+.cert-slot span {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+@media (max-width: 768px) {
+  .journal-entry { padding: 24px; }
+  .journal-entry::before { left: 24px; }
+  .journal-entry h3, .journal-entry p { padding-left: 20px; }
+  .journal-entry .journal-emoji { left: 10px; }
+  .family-grid { grid-template-columns: 1fr; }
+  .cert-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+}

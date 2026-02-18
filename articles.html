@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Articles — Aaryan Tripathi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/articles.css" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo"><span class="logo-bracket">{</span>AT<span class="logo-bracket">}</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">home</a></li>
+      <li><a href="articles.html">articles</a></li>
+      <li><a href="chess.html">chess</a></li>
+      <li><a href="education.html">education</a></li>
+      <li><a href="family.html">family</a></li>
+      <li><a href="photos.html">photos</a></li>
+      <li><a href="trips.html">trips</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <h1>Things I Write</h1>
+      <p class="page-tagline">Thoughts on tech, AI, and the internet's plumbing</p>
+      <p class="page-subtitle">Because sometimes code alone can't tell the whole story</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="articles-grid" data-reveal>
+        <div class="article-card">
+          <div class="article-meta">
+            <span class="article-tag">Web Engineering</span>
+            <span class="article-date">2025</span>
+          </div>
+          <h3 class="article-title">
+            <a href="https://medium.com/@aaryantripathi/the-journey-of-a-web-request-part-1-415101901f59" target="_blank" rel="noopener">
+              The Journey of a Web Request — Part 1
+            </a>
+          </h3>
+          <p class="article-excerpt">
+            Ever wondered what happens when you type a URL and hit enter? Tracing the full lifecycle
+            of a web request — from DNS resolution to rendering pixels. A deep dive into the
+            infrastructure that makes the internet feel instant.
+          </p>
+          <a href="https://medium.com/@aaryantripathi/the-journey-of-a-web-request-part-1-415101901f59" target="_blank" rel="noopener" class="article-read-more">
+            Read on Medium
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <p class="articles-cta" data-reveal>
+        More articles coming soon. Stay tuned.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Designed &amp; Built by <span class="highlight">Aaryan Tripathi</span></p>
+      <p class="footer-subtext">Crafted with coffee, late nights, and an unhealthy amount of CSS.</p>
+      <div class="footer-nav">
+        <a href="index.html">Home</a><a href="articles.html">Articles</a><a href="chess.html">Chess</a>
+        <a href="education.html">Education</a><a href="family.html">Family</a><a href="photos.html">Photos</a><a href="trips.html">Trips</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/common.js"></script>
+</body>
+</html>
